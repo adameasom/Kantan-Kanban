@@ -1,0 +1,438 @@
+/* Light mode and default variables */
+:root {
+  --font-family: 'Outfit', Arial, sans-serif;
+  --text-color: rgb(51, 51, 51);
+  --background-color: rgb(247, 247, 247);
+  --button-background: rgb(238, 238, 238);
+  --border-color: rgba(51, 51, 51, 0.3);
+  --tooltip-border: transparent;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Column colors */
+  --todo-border: rgba(169, 199, 226, 0.7);
+  --in-progress-border: rgba(248, 184, 152, 0.7);
+  --done-border: rgba(166, 209, 182, 0.7);
+
+  /* Task background colors */
+  --todo-bg: rgba(169, 199, 226, 0.15);
+  --in-progress-bg: rgba(248, 184, 152, 0.15);
+  --done-bg: rgba(166, 209, 182, 0.15);
+
+  /* Text colors */
+  --secondary-text-color: rgb(136, 136, 136);
+  --error-color: rgb(220, 53, 69);
+  --cancel-color: rgb(108, 117, 125);
+  --success-color: rgb(75, 207, 75);
+}
+
+/* Dark mode variables */
+body.dark-mode {
+  --text-color: rgb(230, 230, 230);
+  --background-color: rgb(34, 34, 34);
+  --button-background: rgb(51, 51, 51);
+  --border-color: rgba(230, 230, 230, 0.3);
+  --tooltip-border: rgb(230, 230, 230);
+  --box-shadow: rgba(0, 0, 0, 0.5);
+
+  /* Column colors */
+  --todo-border: rgba(90, 125, 155, 0.7);
+  --in-progress-border: rgba(180, 100, 80, 0.7);
+  --done-border: rgba(80, 125, 95, 0.7);
+
+  /* Task background colors */
+  --todo-bg: rgba(90, 125, 155, 0.15);
+  --in-progress-bg: rgba(180, 100, 80, 0.15);
+  --done-bg: rgba(80, 125, 95, 0.15);
+
+  /* Text colors */
+  --secondary-text-color: rgb(170, 170, 170);
+  --error-color: rgb(255, 77, 97);
+  --cancel-color: rgb(130, 140, 145);
+  --success-color: rgb(90, 250, 90);
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+button {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  -webkit-appearance: none; /* Remove default mobile browser styling (iOS and Android) */
+  -moz-appearance: none; /* Remove default mobile browser styling for Firefox */
+  appearance: none; /* Ensure the appearance is consistent across all browsers */
+}
+
+.app-container {
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--background-color);
+}
+
+.app-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 0 40px;
+  
+}
+
+.light-or-dark-button {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.light-or-dark-button svg {
+  height: 24px;
+  width: 24px;
+  transition: color 0.3s ease;
+}
+
+.app-title {
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.columns-container {
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  margin-top: 40px;
+  padding: 10px 20px 20px 20px;
+  gap: 20px;
+}
+
+.column {
+  width: 80vw; /* 80% of the viewport width on mobile */
+  height: 100%;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 8px var(--box-shadow);
+  border-radius: 16px;
+}
+
+.column h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.column form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -24px;
+}
+
+.column.to-do {
+  border: 5px solid var(--todo-border); /* Soft blue task */
+}
+
+.column.in-progress {
+  border: 5px solid var(--in-progress-border); /* Muted orange task */
+}
+
+.column.done {
+  border: 5px solid var(--done-border); /* Soft green task */
+}
+
+.column-header {
+  padding: 16px 16px 0 16px;
+  flex-shrink: 0;
+  height: 122px;
+}
+
+.add-button {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--button-background);
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.add-button svg {
+  width: 24x;
+  height: 24px;
+}
+
+.add-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.column input[type="text"] {
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: 'Outfit', Arial, sans-serif;
+  font-size: 1rem;
+  padding: 8px;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.3);
+  outline: none;
+}
+
+.column input[type="text"]:focus-within {
+  border-bottom: 1px solid rgb(51, 51, 51);
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: calc(100% - 122px);
+  padding: 10px 16px;
+  overflow-y: auto;
+}
+
+.empty-tasks {
+  text-align: center;
+  position: relative;
+  top: 30%;
+  color: #888;
+  font-style: italic;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px var(--box-shadow);
+}
+
+.task-item.to-do {
+  background-color: var(--todo-bg); /* Soft blue task */
+}
+
+.task-item.in-progress {
+  background-color: var(--in-progress-bg); /* Muted orange task */
+}
+
+.task-item.done {
+  background-color: var(--done-bg); /* Soft green task */
+}
+
+.task-item.dragging {
+  opacity: 0.5;
+}
+
+.task-item.removing {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.edit-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-box input[type="text"] {
+  width: 95%;
+  background-color: transparent;
+  color: rgb(126, 126, 126);
+  font-size: 1rem;
+  padding: 0px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  white-space: pre-wrap;
+}
+
+.edit-box input[type="text"]:focus-within {
+  border-bottom: unset;
+}
+
+.edit-box .fake-button {
+  opacity: 0.3;
+  cursor: default !important;
+  pointer-events: none !important;
+}
+
+.edit-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.edit-title-input {
+  font-weight: 500;
+}
+
+.edit-desc-input {
+  font-weight: 200;
+}
+
+.edit-buttons-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.edit-save-or-cancel {
+  display: flex;
+  align-self: center;
+}
+
+.edit-save {
+  color: var(--success-color);
+  margin-right: 8px;
+}
+
+.title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.task-title,
+.task-description {
+  text-align: left;
+  width: 95%;
+}
+
+.task-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.my-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.my-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.task-description {
+  font-size: 1rem;
+  font-weight: 200;
+  white-space: pre-wrap;
+}
+
+.task-footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 8px;
+}
+
+.date-created {
+  font-size: 0.6em;
+  color: var(--secondary-text-color);
+  transition: 0.3s;
+}
+
+.date-created.fade {
+  opacity: 0.1;
+}
+
+.confirmation-box {
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 24px;
+  transform: translateX(-10px);
+  opacity: 0;
+  gap: 8px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.confirmation-box.show {
+  opacity: 1;
+  transform: translateX(-32px);
+  pointer-events: unset;
+  z-index: 10;
+}
+
+.my-text-button {
+  background-color: transparent;
+  padding: 2px 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+
+.confirm-delete {
+  color: var(--error-color);
+}
+
+.confirm-cancel .edit-cancel {
+  color: var(--cancel-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .columns-container {
+    width: 100vw;
+  }
+  .column {
+    width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .add-button:hover {
+    background-color: var(--border-color);
+  }
+  .light-or-dark-button:hover .sun-icon {
+    color: rgb(255, 165, 0);
+  }
+  .light-or-dark-button:hover .moon-icon {
+    color: rgb(0, 0, 0);
+  }
+  .task-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+  }
+  .edit-button:hover,
+  .delete-button:hover,
+  .my-text-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
