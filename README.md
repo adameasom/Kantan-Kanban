@@ -162,6 +162,6 @@ Potential future enhancements include:
 
 ### Mobile & Tablet
 
-<p align="center">
+<p align="left">
   <img src="./screenshots/kantan-kanban-mobile-tablet.png" alt="Mobile View" width="30%">
 </p>
