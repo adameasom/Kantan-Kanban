@@ -8,7 +8,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 <p align="center">
-  <img src="./screenshots/kantan-kanban-desktop-demo.gif" alt="Kantan Kanban Demo" width="900">
+  <img src="./screenshots/kantan-kanban-desktop-demo.gif" alt="Kantan Kanban Demo" width="66%">
 </p>
 
 A lightweight Kanban-style task management application built with **React** and **Vite**.
