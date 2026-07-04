@@ -1,17 +1,22 @@
+````markdown
 # Kantan Kanban
 
-![React](https://img.shields.io/badge/React-19-blue?logo=react)
-![Vite](https://img.shields.io/badge/Vite-7-purple?logo=vite)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)
-![License](https://img.shields.io/badge/License-MIT-green)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+![Kantan Kanban Screenshot](./screenshots/desktop-light.png)
 
 A lightweight Kanban-style task management application built with **React** and **Vite**.
 
-This project was created to strengthen my understanding of React component architecture, state management, drag-and-drop functionality, and browser storage while building a clean, responsive application with a focus on usability.
+This project was created to strengthen my understanding of React component architecture, state management, drag-and-drop interactions, and browser storage while building a clean, responsive application with a focus on usability.
 
 ## 🌐 Live Demo
 
-🔗 https://kantankanban.netlify.app/
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Site-success?logo=netlify)](https://kantankanban.netlify.app/)
 
 ---
 
@@ -22,51 +27,48 @@ This project was created to strengthen my understanding of React component archi
 - [Features](#-features)
 - [Technologies Used](#-technologies-used)
 - [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
 - [What I Learned](#-what-i-learned)
 - [Challenges](#-challenges)
 - [Future Improvements](#-future-improvements)
 - [Screenshots](#-screenshots)
-- [Author](#-author)
 
 ---
 
 ## 📌 Overview
 
-Kantan Kanban is a simple and intuitive task management application inspired by the Kanban workflow.
+Kantan Kanban is a lightweight task management application inspired by the Kanban workflow.
 
 Users can create, edit, delete, and organise tasks by dragging them between workflow columns. Tasks are automatically saved using `localStorage`, allowing progress to persist between browser sessions.
 
-Alongside the core functionality, I focused on creating a polished user experience by implementing responsive design, accessibility improvements, dark mode support, confirmation dialogs, and other small usability enhancements.
+Alongside the core functionality, I focused on creating a polished user experience through responsive design, accessibility improvements, dark mode support, confirmation dialogs, and other usability enhancements.
 
 ---
 
 ## 💪 Key Skills Demonstrated
 
 - React component architecture
-- State management using React Hooks
-- Drag-and-drop implementation
-- Browser data persistence with `localStorage`
+- State management with React Hooks
+- Drag-and-drop functionality
+- Data persistence using `localStorage`
 - Responsive web design
 - Accessibility best practices
-- Component reusability
-- User experience improvements
+- Reusable component design
+- User experience (UX) enhancements
 
 ---
 
 ## ✨ Features
 
-- ✅ Create new tasks
-- ✅ Edit existing tasks
-- ✅ Delete tasks with confirmation
-- ✅ Drag and drop tasks between columns
-- ✅ Automatically save tasks using `localStorage`
-- ✅ Dark mode with saved user preference
-- ✅ Responsive layout for desktop and mobile
-- ✅ Task creation timestamps
-- ✅ Tooltips for improved usability
-- ✅ Accessibility improvements using ARIA labels
-- ✅ Optional vibration feedback on supported mobile devices
+- Create, edit, and delete tasks
+- Drag and drop tasks between workflow columns
+- Automatically save tasks using `localStorage`
+- Dark mode with saved user preference
+- Responsive layout for desktop and mobile devices
+- Task creation timestamps
+- Delete confirmation dialog
+- Tooltips for improved usability
+- Accessibility improvements using ARIA labels
+- Optional vibration feedback on supported mobile devices
 
 ---
 
@@ -91,7 +93,7 @@ Alongside the core functionality, I focused on creating a polished user experien
 git clone https://github.com/adameasom/Kantan-Kanban.git
 ```
 
-### Navigate into the project
+### Navigate to the project directory
 
 ```bash
 cd Kantan-Kanban
@@ -111,46 +113,31 @@ npm run dev
 
 ---
 
-## 📁 Project Structure
-
-```
-src/
-│
-├── components/
-├── hooks/
-├── utils/
-├── App.jsx
-├── main.jsx
-└── styles/
-```
-
----
-
 ## 📚 What I Learned
 
-Building this project helped me develop a stronger understanding of:
+Building this project helped me strengthen my understanding of:
 
 - Structuring React applications into reusable components
 - Managing application state with React Hooks
-- Integrating third-party libraries into a React project
+- Integrating third-party libraries into a React application
 - Persisting application data using `localStorage`
 - Creating responsive layouts for different screen sizes
 - Improving accessibility through semantic HTML and ARIA attributes
-- Adding user-focused features that improve the overall experience
+- Enhancing the user experience with thoughtful interface design
 
 ---
 
 ## 🧩 Challenges
 
-One of the most interesting challenges was implementing drag-and-drop functionality while keeping the application state organised and ensuring task changes were correctly saved to `localStorage`.
+One of the most interesting challenges was implementing drag-and-drop functionality while keeping the application state organised and ensuring task changes were correctly persisted to `localStorage`.
 
-Another challenge was adding features such as dark mode, tooltips, accessibility improvements, and confirmation dialogs without making the codebase difficult to maintain. This project helped me appreciate the importance of keeping components modular and responsibilities clearly separated.
+Another challenge was adding features such as dark mode, accessibility improvements, tooltips, and confirmation dialogs while keeping the codebase modular and maintainable.
 
 ---
 
 ## 🔮 Future Improvements
 
-Possible future enhancements include:
+Potential future enhancements include:
 
 - Task priorities
 - Due dates and reminders
@@ -167,24 +154,13 @@ Possible future enhancements include:
 
 ### Desktop
 
-> Add a screenshot here.
+![Desktop Screenshot](./screenshots/desktop-light.png)
 
 ### Dark Mode
 
-> Add a screenshot here.
+![Dark Mode Screenshot](./screenshots/desktop-dark.png)
 
 ### Mobile
 
-> Add a screenshot here.
-
----
-
-## 👤 Author
-
-**Adam Measom**
-
-GitHub: https://github.com/adameasom
-
----
-
-If you have any feedback or suggestions, feel free to open an issue or reach out.
+![Mobile Screenshot](./screenshots/mobile.png)
+````
