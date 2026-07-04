@@ -11,7 +11,7 @@
   <img src="./screenshots/kantan-kanban-desktop-demo.gif" alt="Kantan Kanban Demo" width="66%">
 </p>
 
-A lightweight Kanban-style task management application built with **React** and **Vite**.
+**Kantan Kanban is a lightweight Kanban-style task management application built with React and Vite, designed to help users organise tasks through an intuitive drag-and-drop interface.**
 
 This project was created to strengthen my understanding of React component architecture, state management, drag-and-drop interactions, and browser storage while building a clean, responsive application with a focus on usability.
 
