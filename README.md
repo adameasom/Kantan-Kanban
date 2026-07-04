@@ -1,4 +1,3 @@
-````markdown
 # Kantan Kanban
 
 ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)
@@ -163,4 +162,3 @@ Potential future enhancements include:
 ### Mobile
 
 ![Mobile Screenshot](./screenshots/mobile.png)
-````
