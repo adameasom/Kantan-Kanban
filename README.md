@@ -7,7 +7,9 @@
 ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-![Kantan Kanban Screenshot](./screenshots/desktop-capture.gif)
+<p align="center">
+  <img src="./screenshots/kantan-kanban-demo.gif" alt="Kantan Kanban Demo" width="900">
+</p>
 
 A lightweight Kanban-style task management application built with **React** and **Vite**.
 
@@ -151,14 +153,15 @@ Potential future enhancements include:
 
 ## 📷 Screenshots
 
-### Desktop
+### Desktop & Dark Mode
 
-![Desktop Screenshot](./screenshots/desktop-light.png)
-
-### Dark Mode
-
-![Dark Mode Screenshot](./screenshots/desktop-dark.png)
+<p align="center">
+  <img src="./screenshots/kantan-kanban-desktop-light.png" alt="Light Mode" width="45%">
+  <img src="./screenshots/kantan-kanban-desktop-dark.png" alt="Dark Mode" width="45%">
+</p>
 
 ### Mobile
 
-![Mobile Screenshot](./screenshots/mobile-tablet.png)
+<p align="center">
+  <img src="./screenshots/kantan-kanban-mobile-tablet.png" alt="Mobile View" width="30%">
+</p>
