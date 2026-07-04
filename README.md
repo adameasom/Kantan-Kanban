@@ -160,7 +160,7 @@ Potential future enhancements include:
   <img src="./screenshots/kantan-kanban-desktop-dark.png" alt="Dark Mode" width="45%">
 </p>
 
-### Mobile
+### Mobile & Tablet
 
 <p align="center">
   <img src="./screenshots/kantan-kanban-mobile-tablet.png" alt="Mobile View" width="30%">
