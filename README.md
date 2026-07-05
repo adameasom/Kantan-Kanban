@@ -24,6 +24,7 @@ This project was created to strengthen my understanding of React component archi
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
+- [Project Motivation](#-project-motivation)
 - [Key Skills Demonstrated](#-key-skills-demonstrated)
 - [Features](#-features)
 - [Technologies Used](#-technologies-used)
@@ -43,6 +44,24 @@ Kantan Kanban is a lightweight task management application inspired by the Kanba
 Users can create, edit, delete, and organise tasks by dragging them between workflow columns. Tasks are automatically saved using `localStorage`, allowing progress to persist between browser sessions.
 
 Alongside the core functionality, I focused on creating a polished user experience through responsive design, accessibility improvements, dark mode support, confirmation dialogs, and other usability enhancements.
+
+---
+
+## 🎯 Project Motivation
+
+I built Kantan Kanban because I wanted a simple, visual way to organise tasks and plan my own work.
+
+While there are many existing task management applications, I wanted to create one that focused on the features and workflow I personally find most useful. Building something I could use in my own day-to-day planning gave me the opportunity to make design decisions based on real usage rather than simply recreating an existing application.
+
+The project also allowed me to strengthen my understanding of:
+
+- React state management
+- Drag-and-drop interactions
+- Component composition
+- Persisting application data with `localStorage`
+- Building responsive layouts with a focus on usability
+
+By using the application myself throughout development, I was able to identify small usability improvements and refine the interface through practical experience.
 
 ---
 
