@@ -32,6 +32,7 @@ This project was created to strengthen my understanding of React component archi
 - [Challenges](#-challenges)
 - [Future Improvements](#-future-improvements)
 - [Screenshots](#-screenshots)
+- [License](#-license)
 
 ---
 
@@ -165,3 +166,11 @@ Potential future enhancements include:
 <p align="left">
   <img src="./screenshots/kantan-kanban-mobile-tablet.png" alt="Mobile View" width="30%">
 </p>
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for more information.
